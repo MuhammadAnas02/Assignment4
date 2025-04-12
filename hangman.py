@@ -88,7 +88,7 @@ while st.session_state.lives > 0 and len(st.session_state.word_letters) > 0:
                 st.warning("Letter already used.")
         else:
             st.error("Invalid input. Enter a single alphabet letter.")
-        st.experimental_rerun()
+        st.rerun()
     break
 
 if st.session_state.lives == 0:
@@ -98,4 +98,4 @@ elif len(st.session_state.word_letters) == 0:
 
 if st.button("Play Again"):
     st.session_state.clear()
-    st.experimental_rerun()
+    st.rerun()
